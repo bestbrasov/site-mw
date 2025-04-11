@@ -44,7 +44,7 @@ const Header: React.FC = () => {
 
                 <div className="relative w-auto h-72 rounded-full overflow-hidden bg-gradient-to-tr from-pink-500 to-purple-600 p-1">
                     <img
-                        src='../../src/assets/BEST_logo_header.png'
+                        src='https://imgur.com/21e2uA9.jpg'
                         alt="Featured Speaker or DJ"
                         className="w-full h-full object-fill rounded py-6 px-10"
                     />

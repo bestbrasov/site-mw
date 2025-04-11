@@ -6,7 +6,7 @@ const Team: React.FC = () => {
                 <div className="bg-gray-800 p-6 rounded-xl shadow-lg text-center">
                     <div
                         className="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden bg-gradient-to-tr from-pink-500 to-purple-600">
-                        <img src="../../src/assets/stirbu.png" alt="Team Member 1"
+                        <img src="https://imgur.com/IxzUWF9.jpg" alt="Team Member 1"
                              className="w-full h-full object-cover"/>
                     </div>
                     <h3 className="text-xl font-semibold text-pink-300">Ștafania Știrbu</h3>
@@ -16,16 +16,21 @@ const Team: React.FC = () => {
                 <div className="bg-gray-800 p-6 rounded-xl shadow-lg text-center">
                     <div
                         className="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden bg-gradient-to-tr from-pink-500 to-purple-600">
-                        <img src="../../src/assets/geo.png" alt="Team Member 2" className="w-full h-full object-cover"/>
+                        <img
+                            src="https://i.imgur.com/smxJUwi.jpg"
+                            alt="Team Member 2"
+                            className="w-full h-full object-cover"
+                        />
                     </div>
                     <h3 className="text-xl font-semibold text-pink-300">Georgiana Pușcașu</h3>
                     <p className="text-white/80 mt-2">Event Coordinator</p>
                 </div>
 
+
                 <div className="bg-gray-800 p-6 rounded-xl shadow-lg text-center">
                     <div
                         className="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden bg-gradient-to-tr from-pink-500 to-purple-600">
-                        <img src="../../src/assets/tabacaru.png" alt="Team Member 3"
+                        <img src="https://imgur.com/STuHqhz.jpg" alt="Team Member 3"
                              className="w-full h-full object-cover"/>
                     </div>
                     <h3 className="text-xl font-semibold text-pink-300">Dimitrie Tăbăcaru</h3>
@@ -35,7 +40,7 @@ const Team: React.FC = () => {
                 <div className="bg-gray-800 p-6 rounded-xl shadow-lg text-center">
                     <div
                         className="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden bg-gradient-to-tr from-pink-500 to-purple-600">
-                        <img src="../../src/assets/vespan.png" alt="Team Member 4"
+                        <img src="https://imgur.com/lBpMEEa.jpg" alt="Team Member 4"
                              className="w-full h-full object-cover"/>
                     </div>
                     <h3 className="text-xl font-semibold text-pink-300">Vespan Laura</h3>
@@ -45,7 +50,7 @@ const Team: React.FC = () => {
                 <div className="bg-gray-800 p-6 rounded-xl shadow-lg text-center">
                     <div
                         className="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden bg-gradient-to-tr from-pink-500 to-purple-600">
-                        <img src="../../src/assets/miron.png" alt="Team Member 5"
+                        <img src="https://imgur.com/8jTAUJD.jpg" alt="Team Member 5"
                              className="w-full h-full object-cover"/>
                     </div>
                     <h3 className="text-xl font-semibold text-pink-300">Miron Răzvan</h3>
@@ -55,7 +60,7 @@ const Team: React.FC = () => {
                 <div className="bg-gray-800 p-6 rounded-xl shadow-lg text-center">
                     <div
                         className="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden bg-gradient-to-tr from-pink-500 to-purple-600">
-                        <img src="../../src/assets/vasiloanca.jpg" alt="Team Member 6"
+                        <img src="https://imgur.com/cyYItJL.jpg" alt="Team Member 6"
                              className="w-full h-full object-cover"/>
                     </div>
                     <h3 className="text-xl font-semibold text-pink-300">Vasiloancă Victor</h3>
