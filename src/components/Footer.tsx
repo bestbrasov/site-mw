@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
                     </div>
                 </div>
                 <p className="text-2xl text-white/70">
-                    © 2025 Motivational Weekend. All Rights Reserved by Bobi and ChatGpt.
+                    © 2025 Motivational Weekend. All Rights Reserved by Bobi and ChatGPT.
                 </p>
             </div>
         </section>

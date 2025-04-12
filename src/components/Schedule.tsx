@@ -50,17 +50,20 @@ const Schedule: React.FC = () => {
     useEffect(() => {
         const updateTime = () => {
             const now = new Date();
+
+            const today = now.toLocaleDateString("en-US", { weekday: "long" });
+            const todaySchedule = scheduleData.find(d => d.day === today);
+            const allEvents = todaySchedule?.events || [];
+
             const formattedTime = now.toLocaleTimeString("en-GB", {
                 hour: "2-digit",
                 minute: "2-digit",
                 hour12: false
             });
 
-            const allEvents = scheduleData.flatMap(day => day.events);
-
             const nowMinutes = parseInt(formattedTime.split(":")[0]) * 60 + parseInt(formattedTime.split(":")[1]);
 
-            let current = allEvents[0][1]; // default to first event
+            let current = "No ongoing event";
             for (let i = 0; i < allEvents.length; i++) {
                 const [time, desc] = allEvents[i];
                 const [h, m] = time.split(":").map(Number);
@@ -95,15 +98,20 @@ const Schedule: React.FC = () => {
                         <div key={day} className="bg-gray-900 p-6 rounded-xl shadow-xl">
                             <h3 className="text-2xl font-bold text-pink-300 mb-4 text-center">{day}</h3>
                             <ul className="space-y-4">
-                                {events.map(([time, desc], j) => (
-                                    <li
-                                        key={j}
-                                        className={`flex justify-between items-center p-4 rounded-lg ${j % 2 === 0 ? "bg-gray-800" : "bg-gray-700"}`}
-                                    >
-                                        <span className="text-sm text-pink-200 font-mono w-24">{time}</span>
-                                        <span className="flex-1 text-left ml-4">{desc}</span>
-                                    </li>
-                                ))}
+                                {events.map(([time, desc], j) => {
+                                    const isCurrent = currentEvent === desc;
+                                    return (
+                                        <li
+                                            key={j}
+                                            className={`flex justify-between items-center p-4 rounded-lg ${
+                                                j % 2 === 0 ? "bg-gray-800" : "bg-gray-700"
+                                            } ${isCurrent ? "ring-2 ring-pink-400" : ""}`}
+                                        >
+                                            <span className="text-sm text-pink-200 font-mono w-24">{time}</span>
+                                            <span className="flex-1 text-left ml-4">{desc}</span>
+                                        </li>
+                                    );
+                                })}
                             </ul>
                         </div>
                     ))}

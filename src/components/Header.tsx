@@ -42,13 +42,14 @@ const Header: React.FC = () => {
                     </p>
                 </div>
 
-                <div className="relative w-auto h-72 rounded-full overflow-hidden bg-gradient-to-tr from-pink-500 to-purple-600 p-1">
+                <div className="relative w-60 sm:w-72 md:w-80 aspect-square rounded-full overflow-hidden bg-gradient-to-tr from-pink-500 to-purple-600 p-1 mx-auto">
                     <img
-                        src='https://imgur.com/21e2uA9.jpg'
+                        src="https://imgur.com/21e2uA9.jpg"
                         alt="Featured Speaker or DJ"
-                        className="w-full h-full object-fill rounded py-6 px-10"
+                        className="w-full h-full object-contain rounded-full p-6 sm:p-8"
                     />
                 </div>
+
             </div>
         </header>
     );
