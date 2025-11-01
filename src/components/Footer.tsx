@@ -38,13 +38,13 @@ const Footer: React.FC = () => {
                         </a>
                         <span className="text-[#4ecdc4]/50">•</span>
                         <a 
-                            href="https://chatgpt.com" 
+                            href="https://www.instagram.com/ioana_felly/" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="hover:text-[#4ecdc4] transition-colors text-white/90 font-medium"
                             style={{ textShadow: '1px 1px 0px rgba(0,0,0,0.3)' }}
                         >
-                            ChatGPT
+                            Roackeru
                         </a>
                         <span className="text-[#4ecdc4]/50">•</span>
                         <a 
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
                             className="hover:text-[#4ecdc4] transition-colors text-white/90 font-medium"
                             style={{ textShadow: '1px 1px 0px rgba(0,0,0,0.3)' }}
                         >
-                            Roackeru
+                            ChatGBT
                         </a>
                     </div>
                 </div>
