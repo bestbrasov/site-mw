@@ -9,40 +9,39 @@ const Schedule: React.FC = () => {
         {
             day: "Friday",
             events: [
-                ["18:00", "Arrival"],
-                ["18:30", "G2K"],
+                ["18:30", "Arrival"],
                 ["19:00", "Opening"],
-                ["19:30", "Mongolian"],
-                ["20:00", "Break"],
-                ["21:00", "Beer Contest"],
-                ["22:00", "Campfire"],
-                ["00:00", "Chaos Under The Palms / Boardgames & Party"]
+                ["19:30", "Karaoke"],
+                ["21:00", "Break"],
+                ["21:30", "Tradition Sharing"],
+                ["22:30", "Break"],
+                ["23:00", "Party Time (by babies)"]
             ]
         },
         {
             day: "Saturday",
             events: [
                 ["09:00", "Wake-up"],
-                ["09:30", "Breakfast"],
-                ["10:30", "Generation Teambuilding"],
-                ["11:30", "Activity Teambuilding"],
-                ["12:30", "Common Teambuilding"],
-                ["13:30", "Photo Session"],
-                ["14:00", "Lunch"],
-                ["15:30", "Fast Words Challenge"],
-                ["17:00", "Family Time"],
+                ["09:15", "Breakfast"],
+                ["10:00", "Generation Teambuilding"],
+                ["13:00", "Lunch"],
+                ["13:45", "Common Teambuilding"],
+                ["15:45", "Break"],
+                ["16:30", "Photo Session"],
+                ["17:30", "Family Time"],
+                ["18:30", "Dinner"],
                 ["19:00", "Talent Show"],
-                ["20:30", "Dinner"],
-                ["21:30", "Cantus"],
-                ["23:00", "Minion Zzz Party"]
+                ["21:30", "Break"],
+                ["22:30", "Room Crawl"],
+                ["23:59", "Party Time"]
             ]
         },
         {
             day: "Sunday",
             events: [
                 ["09:00", "Wake-up"],
-                ["09:30", "Breakfast"],
-                ["13:00", "Departure"]
+                ["10:00", "Breakfast"],
+                ["11:00", "Departure"]
             ]
         }
     ];
