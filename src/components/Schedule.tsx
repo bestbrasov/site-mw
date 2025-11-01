@@ -9,40 +9,39 @@ const Schedule: React.FC = () => {
         {
             day: "Friday",
             events: [
-                ["18:00", "Arrival"],
-                ["18:30", "G2K"],
+                ["18:30", "Arrival"],
                 ["19:00", "Opening"],
-                ["19:30", "Mongolian"],
-                ["20:00", "Break"],
-                ["21:00", "Beer Contest"],
-                ["22:00", "Campfire"],
-                ["00:00", "Chaos Under The Palms / Boardgames & Party"]
+                ["19:30", "Karaoke"],
+                ["21:00", "Break"],
+                ["21:30", "Tradition Sharing"],
+                ["22:30", "Break"],
+                ["23:00", "Party Time (by babies)"]
             ]
         },
         {
             day: "Saturday",
             events: [
                 ["09:00", "Wake-up"],
-                ["09:30", "Breakfast"],
-                ["10:30", "Generation Teambuilding"],
-                ["11:30", "Activity Teambuilding"],
-                ["12:30", "Common Teambuilding"],
-                ["13:30", "Photo Session"],
-                ["14:00", "Lunch"],
-                ["15:30", "Fast Words Challenge"],
-                ["17:00", "Family Time"],
+                ["09:15", "Breakfast"],
+                ["10:00", "Generation Teambuilding"],
+                ["13:00", "Lunch"],
+                ["13:45", "Common Teambuilding"],
+                ["15:45", "Break"],
+                ["16:30", "Photo Session"],
+                ["17:30", "Family Time"],
+                ["18:30", "Dinner"],
                 ["19:00", "Talent Show"],
-                ["20:30", "Dinner"],
-                ["21:30", "Cantus"],
-                ["23:00", "Minion Zzz Party"]
+                ["21:30", "Break"],
+                ["22:30", "Room Crawl"],
+                ["23:59", "Party Time"]
             ]
         },
         {
             day: "Sunday",
             events: [
                 ["09:00", "Wake-up"],
-                ["09:30", "Breakfast"],
-                ["13:00", "Departure"]
+                ["10:00", "Breakfast"],
+                ["11:00", "Departure"]
             ]
         }
     ];
@@ -86,29 +85,36 @@ const Schedule: React.FC = () => {
     }, []);
 
     return (
-        <section id="schedule" className="bg-gray-950 text-white px-6 py-20">
-            <div className="max-w-6xl mx-auto text-center">
-                <h2 className="text-4xl font-bold text-pink-400 mb-4 uppercase tracking-wide">Event Schedule</h2>
-                <div className="bg-gray-900 text-pink-300 px-6 py-4 rounded-xl text-lg mb-12 shadow-md inline-block">
-                    Current activity: <strong>{currentEvent}</strong>
+        <section id="schedule" className="relative bg-gradient-to-b from-[#1a4d5e] via-[#2d6b7a] to-[#1a4d5e] text-white px-6 py-20 overflow-hidden">
+            {/* Decorative gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#1a4d5e]/50 via-transparent to-[#2d6b7a]/30"></div>
+            
+            <div className="max-w-6xl mx-auto text-center relative z-10">
+                <h2 className="text-4xl font-bold text-[#f4e6d0] mb-6 uppercase tracking-wide" style={{ textShadow: '3px 3px 0px rgba(0,0,0,0.7)' }}>
+                    Event Schedule
+                </h2>
+                <div className="bg-[#d97c4a]/90 backdrop-blur-sm text-white px-8 py-4 rounded-2xl text-lg mb-12 shadow-2xl inline-block border-2 border-[#f4e6d0]/40">
+                    <span className="text-[#f4e6d0]/80">Current activity:</span> <strong className="text-[#f4e6d0]">{currentEvent}</strong>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-left">
                     {scheduleData.map(({ day, events }) => (
-                        <div key={day} className="bg-gray-900 p-6 rounded-xl shadow-xl">
-                            <h3 className="text-2xl font-bold text-pink-300 mb-4 text-center">{day}</h3>
-                            <ul className="space-y-4">
+                        <div key={day} className="bg-[#1a4d5e]/80 backdrop-blur-md p-6 rounded-2xl shadow-2xl border-2 border-[#d97c4a]/40 hover:border-[#f4e6d0]/60 transition-all duration-300">
+                            <h3 className="text-2xl font-bold text-[#f4e6d0] mb-6 text-center pb-3 border-b-2 border-[#d97c4a]/30" style={{ textShadow: '2px 2px 0px rgba(0,0,0,0.5)' }}>
+                                {day}
+                            </h3>
+                            <ul className="space-y-3">
                                 {events.map(([time, desc], j) => {
                                     const isCurrent = currentEvent === desc;
                                     return (
                                         <li
                                             key={j}
-                                            className={`flex justify-between items-center p-4 rounded-lg ${
-                                                j % 2 === 0 ? "bg-gray-800" : "bg-gray-700"
-                                            } ${isCurrent ? "ring-2 ring-pink-400" : ""}`}
+                                            className={`flex items-center p-3 rounded-lg transition-all duration-200 ${
+                                                j % 2 === 0 ? "bg-[#2d6b7a]/40" : "bg-[#d97c4a]/20"
+                                            } ${isCurrent ? "ring-2 ring-[#f4e6d0] shadow-lg scale-105 bg-[#d97c4a]/50" : "hover:bg-[#2d6b7a]/60"} backdrop-blur-sm`}
                                         >
-                                            <span className="text-sm text-pink-200 font-mono w-24">{time}</span>
-                                            <span className="flex-1 text-left ml-4">{desc}</span>
+                                            <span className="text-sm text-[#f4e6d0] font-mono font-bold bg-[#1a4d5e]/50 px-3 py-1 rounded-md">{time}</span>
+                                            <span className="flex-1 text-left ml-4 text-white/95 font-medium">{desc}</span>
                                         </li>
                                     );
                                 })}

@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
 import Schedule from "./components/Schedule.tsx";
-import BarPrice from "./components/BarPrice.tsx";
 import DriveLink from "./components/DriveLink.tsx";
 import Team from "./components/Team.tsx";
 import Footer from "./components/Footer.tsx";
@@ -13,9 +12,6 @@ const App: React.FC = () => {
             <Header/>
             <div id="schedule">
                 <Schedule/>
-            </div>
-            <div id="bar-prices">
-                <BarPrice/>
             </div>
             <div id="drive-link">
                 <DriveLink/>
