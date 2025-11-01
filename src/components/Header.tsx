@@ -2,18 +2,32 @@ import React from 'react';
 
 const Header: React.FC = () => {
     return (
-        <header className="relative bg-gradient-to-r from-indigo-900 via-purple-800 to-blue-900 text-white overflow-hidden">
-            <div className="flex items-center justify-between px-6 py-4 shadow-md">
-                <div className="text-2xl font-bold tracking-wider uppercase">
+        <header className="relative text-white overflow-hidden">
+            {/* Background image */}
+            <div className="absolute inset-0">
+                <img 
+                    src="https://i.imgur.com/8vyqbom.jpeg" 
+                    alt="Background" 
+                    className="w-full h-full object-cover"
+                />
+            </div>
+            
+            {/* Semi-transparent gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#9B8B4F]/80 via-[#C89176]/70 to-[#4A3F42]/80"></div>
+            
+            {/* Texture overlay */}
+            <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')]"></div>
+            
+            <div className="flex items-center justify-between px-6 py-4 shadow-md relative z-10">
+                <div className="text-2xl font-bold tracking-wider uppercase text-[#EAD19E]" style={{ textShadow: '2px 2px 0px rgba(0,0,0,0.5)' }}>
                     Motivational Weekend
                 </div>
 
                 <nav className="hidden md:flex gap-6 text-sm font-medium">
-                    <a href="#schedule" className="hover:text-pink-400 transition-colors">Schedule</a>
-                    <a href="#code-of-conduct" className="hover:text-pink-400 transition-colors">Code of Conduct</a>
-                    <a href="#bar-prices" className="hover:text-pink-400 transition-colors">Bar Prices</a>
-                    <a href="#drive-link" className="hover:text-pink-400 transition-colors">Drive Folder</a>
-                    <a href="#contact" className="hover:text-pink-400 transition-colors">Contact</a>
+                    <a href="#schedule" className="hover:text-[#EAD19E] transition-colors">Schedule</a>
+                    <a href="#drive-link" className="hover:text-[#EAD19E] transition-colors">Drive Folder</a>
+                    <a href="#contact" className="hover:text-[#EAD19E] transition-colors">Contact</a>
+                    <a href="#code-of-conduct" className="hover:text-[#EAD19E] transition-colors">Code of Conduct</a>
                 </nav>
 
                 <div className="md:hidden">
@@ -31,26 +45,35 @@ const Header: React.FC = () => {
                 </div>
             </div>
 
-            <div className="relative flex flex-col md:flex-row items-center justify-between px-40 py-20 md:py-32 gap-10">
+            <div className="relative flex flex-col md:flex-row items-center justify-between px-40 py-20 md:py-32 gap-10 z-10">
+                <div className="absolute left-10 bottom-10 opacity-30">
+                    <img src="https://i.imgur.com/aTri1f3.png" alt="" className="w-32 h-32 object-contain" />
+                </div>
+                <div className="absolute right-10 top-10 opacity-30">
+                    <img src="https://i.imgur.com/slyDmcU.png" alt="" className="w-32 h-32 object-contain" />
+                </div>
+
                 <div className="max-w-xl">
-                    <p className="text-sm uppercase tracking-widest text-pink-300">Inspiration • Connection • Music</p>
-                    <h1 className="text-5xl md:text-6xl font-extrabold mt-4 leading-tight">
-                        Motivational <span className="text-pink-400">Weekend</span> 2025
+                    <p className="text-sm uppercase tracking-widest text-[#EAD19E]" style={{ textShadow: '1px 1px 0px rgba(0,0,0,0.5)' }}>Inspiration • Connection • Music</p>
+                    <h1 className="text-5xl md:text-6xl font-extrabold mt-4 leading-tight" style={{ textShadow: '3px 3px 0px rgba(0,0,0,0.5)' }}>
+                        Motivational <span className="text-[#EAD19E]">Weekend</span> 2025
                     </h1>
-                    <p className="mt-4 text-lg text-white/80 max-w-md">
-                        Join us for an unforgettable weekend of grate party, inspiring talks, and vibrant energy. 11 - 12+1 April 2025.
+                    <p className="mt-4 text-lg text-white/90 max-w-md">
+                        Join us for an unforgettable weekend of grate party, inspiring talks, and vibrant energy. 7 - 9 November 2025.
                     </p>
                 </div>
 
-                <div className="relative w-60 sm:w-72 md:w-80 aspect-square rounded-full overflow-hidden bg-gradient-to-tr from-pink-500 to-purple-600 p-1 mx-auto">
+                <div className="relative w-80 sm:w-96 md:w-[400px] aspect-square rounded-full bg-gradient-to-tr from-[#C89176] to-[#9B8B4F] p-2 mx-auto flex items-center justify-center shadow-2xl">
                     <img
-                        src="https://imgur.com/21e2uA9.jpg"
+                        src="https://i.imgur.com/21e2uA9.png"
                         alt="Featured Speaker or DJ"
-                        className="w-full h-full object-contain rounded-full p-6 sm:p-8"
+                        className="w-[85%] h-[95%] object-contain rounded-full"
                     />
                 </div>
 
             </div>
+            
+            <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/20 to-transparent z-10"></div>
         </header>
     );
 };
